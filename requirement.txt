@@ -2,7 +2,6 @@ ca-certificates==2022.07.19
 certifi==2022.6.15	
 openssl==1.1.1q	
 pip==22.1.2	
-python==3.9.12	
 setuptools==61.2.0	
 sqlite==3.38.5	
 tzdata==2022a	
