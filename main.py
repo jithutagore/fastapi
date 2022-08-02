@@ -1,4 +1,3 @@
-import uvicorn
 from fastapi import FastAPI
 from create_class import DbHelper
 from api_base_model import User
@@ -41,7 +40,3 @@ def update_user(input_json: User):
     age = input_json.age
     DbHelper().update_user(user_id, username, age)
     return input_json
-
-
-if __name__ == "__main__":
-    uvicorn.run(app, host="localhost", port=5851)
