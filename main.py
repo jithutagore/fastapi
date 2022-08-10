@@ -1,11 +1,12 @@
 from fastapi import FastAPI
 from create_class import DbHelper
 from api_base_model import User
+import uvicorn
 
 app = FastAPI()
 
 
-@app.get("/fetch")
+@app.get("/")
 async def get_student():
     obj = DbHelper().fetch_all()
     return obj
@@ -40,3 +41,5 @@ def update_user(input_json: User):
     age = input_json.age
     DbHelper().update_user(user_id, username, age)
     return input_json
+if __name__ == "__main__":
+    uvicorn.run(app, host="localhost", port=5100)
